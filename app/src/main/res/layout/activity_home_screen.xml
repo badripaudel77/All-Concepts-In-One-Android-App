@@ -16,4 +16,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/popupMenuBtn"
+        android:layout_width="271dp"
+        android:layout_height="56dp"
+        android:text="show popup menu"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/showContextualMenuBtn"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
+        android:text="Show ContextMenu : Long Press"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/popupMenuBtn"
+        app:layout_constraintStart_toStartOf="@+id/popupMenuBtn"
+        app:layout_constraintTop_toBottomOf="@+id/popupMenuBtn" />
+
+    <EditText
+        android:id="@+id/etInput"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Enter Something"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.267" />
 </androidx.constraintlayout.widget.ConstraintLayout>
