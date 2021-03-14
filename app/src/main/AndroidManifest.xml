@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".HomeScreenActivity"></activity>
+        <activity android:name=".RestApiActivity"></activity>
+        <activity android:name=".HomeScreenActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
