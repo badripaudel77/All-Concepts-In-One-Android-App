@@ -1,6 +1,7 @@
 package com.manav.allinoneandroidapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.manav.allinoneandroidapp.R;
+import com.manav.allinoneandroidapp.TabActivity;
 import com.manav.allinoneandroidapp.models.DataItem;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
 
     Context context;
     private ArrayList<DataItem> dataItemArrayList;
+
     public AppItemsAdapter(Context context, ArrayList<DataItem> dataItemArrayList) {
         this.context = context;
         this.dataItemArrayList = dataItemArrayList;
@@ -50,6 +53,18 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
         //set the value
         holder.imageView.setImageResource(dataItem.getImageURL());
         holder.itemName.setText(dataItem.getItemName());
+
+        //set onclick listener on rv item
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "position : " + position, Toast.LENGTH_SHORT).show();
+                if (position == 0) {
+                    Intent intent = new Intent(v.getContext(), TabActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
