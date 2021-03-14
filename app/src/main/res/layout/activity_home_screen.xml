@@ -7,10 +7,13 @@
     tools:context=".HomeScreenActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvGoToRCView"
         android:layout_width="244dp"
         android:layout_height="46dp"
-        android:text="Home Screen Activity"
+        android:background="@android:color/holo_green_dark"
+        android:gravity="center"
+        android:text="Go To RecyclerView"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,9 +26,9 @@
         android:layout_height="56dp"
         android:text="show popup menu"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/tvGoToRCView"
+        app:layout_constraintEnd_toEndOf="@+id/tvGoToRCView"
+        app:layout_constraintStart_toStartOf="@+id/tvGoToRCView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -33,7 +36,7 @@
         android:layout_width="268dp"
         android:layout_height="57dp"
         android:text="Show ContextMenu : Long Press"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/tvGoToRCView"
         app:layout_constraintEnd_toEndOf="@+id/popupMenuBtn"
         app:layout_constraintStart_toStartOf="@+id/popupMenuBtn"
         app:layout_constraintTop_toBottomOf="@+id/popupMenuBtn" />
@@ -46,9 +49,9 @@
         android:hint="Enter Something"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/tvGoToRCView"
         app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/tvGoToRCView"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoToRCView"
         app:layout_constraintVertical_bias="0.267" />
 </androidx.constraintlayout.widget.ConstraintLayout>
