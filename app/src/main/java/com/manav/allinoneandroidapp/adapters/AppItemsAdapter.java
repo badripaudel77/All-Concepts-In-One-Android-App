@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.manav.allinoneandroidapp.BottomNavActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.TabActivity;
 import com.manav.allinoneandroidapp.models.DataItem;
@@ -61,6 +62,10 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
                 Toast.makeText(context, "position : " + position, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
                     Intent intent = new Intent(v.getContext(), TabActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+                if (position == 2) {
+                    Intent intent = new Intent(v.getContext(), BottomNavActivity.class);
                     v.getContext().startActivity(intent);
                 }
             }

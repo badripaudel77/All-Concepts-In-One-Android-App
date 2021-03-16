@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".TabActivity"></activity>
+        <activity android:name=".BottomNavActivity"></activity>
+        <activity android:name=".TabActivity" />
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".HomeScreenActivity" />
         <activity android:name=".MainActivity">
