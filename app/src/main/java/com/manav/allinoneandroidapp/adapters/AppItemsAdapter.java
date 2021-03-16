@@ -54,7 +54,7 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
         holder.imageView.setImageResource(dataItem.getImageURL());
         holder.itemName.setText(dataItem.getItemName());
 
-        //set onclick listener on rv item
+        //set onclick listener on recycler view item and start activity based on the position of the item in the list
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
