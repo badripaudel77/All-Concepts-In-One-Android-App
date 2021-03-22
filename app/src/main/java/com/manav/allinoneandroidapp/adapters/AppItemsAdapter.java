@@ -2,7 +2,6 @@ package com.manav.allinoneandroidapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.manav.allinoneandroidapp.BottomNavActivity;
+import com.manav.allinoneandroidapp.DashboardActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.TabActivity;
 import com.manav.allinoneandroidapp.models.DataItem;
@@ -67,6 +67,10 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
                 if (position == 2) {
                     Intent intent = new Intent(v.getContext(), BottomNavActivity.class);
                     v.getContext().startActivity(intent);
+                }
+
+                if(position == 3) {
+                    v.getContext().startActivity(new Intent(v.getContext(), DashboardActivity.class));
                 }
             }
         });

@@ -58,7 +58,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Tab Activity"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Rest API"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Bottom Nav"));
-        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Common Widget"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Dashboard"));
 
 
         //set adapter
@@ -85,7 +85,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 recyclerView.setLayoutManager(gridLayoutManager);
-
             }
         });
     }
