@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".DashboardActivity"></activity>
+
+        <activity android:name=".DashboardActivity"
+           android:theme="@style/Theme.DashboardTheme"
+            />
+
         <activity android:name=".BottomNavActivity" />
         <activity android:name=".TabActivity" />
         <activity android:name=".RecyclerViewActivity" />

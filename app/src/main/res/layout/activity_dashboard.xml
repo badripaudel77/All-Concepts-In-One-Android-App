@@ -34,7 +34,6 @@
         app:menu="@menu/dashboard_menu_item"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header_dashboard"
-        android:layout_marginTop="56dp"
         />
 
 </androidx.drawerlayout.widget.DrawerLayout>

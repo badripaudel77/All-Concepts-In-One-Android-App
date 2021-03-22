@@ -32,15 +32,18 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         toolbar = findViewById(R.id.customToolbar);
+
+        //toolbar.setTitle("");
+        toolbar.setTitle("Dashboard");
+
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
-        //getSupportActionBar().hide();
-        getSupportActionBar().setTitle("Dashboard");
+
 
         //by default set one fragment
         switchFragment(new AccountFragment());
 
-        //setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
