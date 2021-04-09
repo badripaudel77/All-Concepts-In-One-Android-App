@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.manav.allinoneandroidapp.BottomNavActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.TabActivity;
 import com.manav.allinoneandroidapp.models.DataItem;
@@ -54,13 +55,17 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
         holder.imageView.setImageResource(dataItem.getImageURL());
         holder.itemName.setText(dataItem.getItemName());
 
-        //set onclick listener on rv item
+        //set onclick listener on recycler view item and start activity based on the position of the item in the list
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "position : " + position, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
                     Intent intent = new Intent(v.getContext(), TabActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+                if (position == 2) {
+                    Intent intent = new Intent(v.getContext(), BottomNavActivity.class);
                     v.getContext().startActivity(intent);
                 }
             }
