@@ -1,6 +1,8 @@
 package com.manav.allinoneandroidapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.manav.allinoneandroidapp.adapters.ItemAdapter;
 import com.manav.allinoneandroidapp.model.UserModel;
 
 import org.json.JSONArray;
@@ -22,7 +25,10 @@ public class LoadJSONActivity extends AppCompatActivity {
     private static final String TAG = "tag";
     private String jsonRes;
 
-    List<UserModel> userModelList;
+    private ArrayList<UserModel> userModelList;
+
+    private RecyclerView jsonDataRCV;
+    private ItemAdapter jsonDataItemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,8 @@ public class LoadJSONActivity extends AppCompatActivity {
         userModelList = new ArrayList<>();
 
         jsonRes = loadJSONFromAsset();
+
+        jsonDataRCV = findViewById(R.id.jsonDataRecyclerView);
 
         try {
             JSONObject jsonObject = new JSONObject(jsonRes);
@@ -50,7 +58,7 @@ public class LoadJSONActivity extends AppCompatActivity {
 
                 String id = jsonObject1.getString("id");
                 String email = jsonObject1.getString("email");
-                Toast.makeText(this, "email and id " + email + " " + id, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "email and id " + email + " " + id, Toast.LENGTH_SHORT).show();
 
              //Gson converts json to pojo like jackson binding..
                 Gson gson = new Gson();
@@ -62,14 +70,17 @@ public class LoadJSONActivity extends AppCompatActivity {
                 // ... manipulate the userlist now... into recycler view... or something...
                 //Toast.makeText(this, "usermodel list ? " + userModelList.get(0).getEmail(), Toast.LENGTH_SHORT).show();
 
-
             }
-
         }
+
         catch (Exception e) {
             Toast.makeText(this, "Exception while loading json : " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
+        jsonDataItemAdapter = new ItemAdapter(userModelList, LoadJSONActivity.this);
+        jsonDataRCV.setLayoutManager(new LinearLayoutManager(this));
+
+        jsonDataRCV.setAdapter(jsonDataItemAdapter);
     }
 
     private String loadJSONFromAsset() {

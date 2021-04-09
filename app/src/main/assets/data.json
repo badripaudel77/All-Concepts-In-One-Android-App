@@ -9,42 +9,42 @@
       "email": "michael.lawson@reqres.in",
       "first_name": "Michael",
       "last_name": "Lawson",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+      "avatar": "https://images.pexels.com/photos/2294478/pexels-photo-2294478.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
       "id": 8,
       "email": "lindsay.ferguson@reqres.in",
       "first_name": "Lindsay",
       "last_name": "Ferguson",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg"
+      "avatar": "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
       "id": 9,
       "email": "tobias.funke@reqres.in",
       "first_name": "Tobias",
       "last_name": "Funke",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg"
+      "avatar": "https://images.pexels.com/photos/7330926/pexels-photo-7330926.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
       "id": 10,
       "email": "byron.fields@reqres.in",
       "first_name": "Byron",
       "last_name": "Fields",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg"
+      "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
       "id": 11,
       "email": "george.edwards@reqres.in",
       "first_name": "George",
       "last_name": "Edwards",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+      "avatar": "https://images.pexels.com/photos/4939461/pexels-photo-4939461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
       "id": 12,
       "email": "rachel.howell@reqres.in",
       "first_name": "Rachel",
       "last_name": "Howell",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg"
+      "avatar": "https://images.pexels.com/photos/4473796/pexels-photo-4473796.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     }
   ]
 }
