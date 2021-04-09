@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.manav.allinoneandroidapp.BottomNavActivity;
 import com.manav.allinoneandroidapp.DashboardActivity;
+import com.manav.allinoneandroidapp.LoadJSONActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.RestApiActivity;
 import com.manav.allinoneandroidapp.TabActivity;
@@ -66,7 +67,7 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
                     v.getContext().startActivity(intent);
                 }
                 if (position == 1) {
-                    Intent intent = new Intent(v.getContext(), RestApiActivity.class);
+                    Intent intent = new Intent(v.getContext(), LoadJSONActivity.class);
                     v.getContext().startActivity(intent);
                 }
                 if (position == 2) {

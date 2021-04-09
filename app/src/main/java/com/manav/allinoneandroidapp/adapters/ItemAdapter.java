@@ -48,6 +48,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         //Picasso.get().load("https://s0.2mdn.net/6629020/RMKT-Q1-2021_DOMAIN-SET-B_INTL_160X600_IMAGE.png").into(holder.profile);
 
         Glide.with(context).load(user.getAvatar()).placeholder(R.drawable.ic_launcher_foreground).into(holder.profile);
+
+        //handling onclick on whole (usermodel) item while loading json
+        holder.itemView.setOnClickListener(v ->
+                Toast.makeText(context, "User : " + user.getFirstName() + " " + user.getLastName(), Toast.LENGTH_SHORT).show()
+        );
     }
 
     @Override

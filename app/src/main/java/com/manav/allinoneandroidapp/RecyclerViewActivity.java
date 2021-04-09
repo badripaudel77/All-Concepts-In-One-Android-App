@@ -56,9 +56,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
         gridLayoutManager = new GridLayoutManager(this,2);
         //add items to list
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Tab Activity"));
-        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Rest API"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Load JSON"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Bottom Nav"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Dashboard"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Rest API - Retrofit"));
+
 
 
         //set adapter
