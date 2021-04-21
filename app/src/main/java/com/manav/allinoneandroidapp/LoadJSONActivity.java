@@ -85,7 +85,6 @@ public class LoadJSONActivity extends AppCompatActivity {
 
     private String loadJSONFromAsset() {
         String json = null;
-
         try {
             InputStream inputStream = getAssets().open("data.json");
             int size = inputStream.available();
@@ -94,7 +93,6 @@ public class LoadJSONActivity extends AppCompatActivity {
 
             inputStream.read(buffer);
             inputStream.close();
-
             json = new String(buffer, "UTF-8");
         }
 

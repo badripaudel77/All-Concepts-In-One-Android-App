@@ -61,7 +61,7 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "position : " + position, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "position : " + position, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
                     Intent intent = new Intent(v.getContext(), TabActivity.class);
                     v.getContext().startActivity(intent);
@@ -77,6 +77,10 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
 
                 if(position == 3) {
                     v.getContext().startActivity(new Intent(v.getContext(), DashboardActivity.class));
+                }
+
+                if(position == 4) {
+                    v.getContext().startActivity(new Intent(v.getContext(), RestApiActivity.class));
                 }
             }
         });

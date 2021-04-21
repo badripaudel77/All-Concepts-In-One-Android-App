@@ -19,7 +19,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
-
     ArrayList<UserModel> userModelArrayList;
     Context context;
 
@@ -63,6 +62,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView profile;
+
         TextView fullname, email;
 
         public ViewHolder(@NonNull View itemView) {
