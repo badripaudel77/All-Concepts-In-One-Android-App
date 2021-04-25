@@ -14,7 +14,7 @@ public interface RetrofitService {
     @GET("photos")
     Call<List<PhotoModel>> getAllPhotos();
 
-    //get photos
+    //get photo details or only one photo
     @GET("photos/{id}")
     Call<List<PhotoModel>> getOnePhoto(@Path("id") int id);
 

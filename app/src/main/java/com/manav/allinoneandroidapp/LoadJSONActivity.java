@@ -60,7 +60,7 @@ public class LoadJSONActivity extends AppCompatActivity {
                 String email = jsonObject1.getString("email");
                 //Toast.makeText(this, "email and id " + email + " " + id, Toast.LENGTH_SHORT).show();
 
-             //Gson converts json to pojo like jackson binding..
+                //Gson converts json to pojo like jackson binding..
                 Gson gson = new Gson();
 
                 UserModel model = gson.fromJson(String.valueOf(jsonObject1), UserModel.class);

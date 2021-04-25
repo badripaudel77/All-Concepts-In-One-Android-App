@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RetroOnePhotActivity">
+
+    <ImageView
+        android:id="@+id/retroOnePhotoThumbnail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/retroOnePhotTitle"
+        android:layout_width="108dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="50dp"
+        android:text="Title"
+        app:layout_constraintStart_toStartOf="@+id/retroOnePhotoThumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/retroOnePhotoThumbnail" />
+
+    <ImageView
+        android:id="@+id/retroOnePhotoImgURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/retroOnePhotoThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/retroOnePhotoThumbnail"
+        tools:srcCompat="@tools:sample/avatars" />
+</androidx.constraintlayout.widget.ConstraintLayout>
