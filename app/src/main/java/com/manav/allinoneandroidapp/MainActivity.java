@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toast.makeText(this, "onCreate() calls before onStart()", Toast.LENGTH_SHORT).show();
+
         button = findViewById(R.id.button);
         button.setOnClickListener(v -> startActivity(new Intent(this, HomeScreenActivity.class)));
     }
@@ -24,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "Toast Demo", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Toast Demo from onStart()", Toast.LENGTH_SHORT).show();
     }
 }

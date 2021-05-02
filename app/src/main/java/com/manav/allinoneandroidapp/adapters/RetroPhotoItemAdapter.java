@@ -32,7 +32,6 @@ public class RetroPhotoItemAdapter extends RecyclerView.Adapter<RetroPhotoItemAd
 
     RetrofitService retrofitService;
 
-
     public RetroPhotoItemAdapter(ArrayList<PhotoModel> photoModelArrayList, Context context) {
         this.photoModelArrayList = photoModelArrayList;
         this.context = context;
@@ -47,19 +46,12 @@ public class RetroPhotoItemAdapter extends RecyclerView.Adapter<RetroPhotoItemAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         PhotoModel photoModel = photoModelArrayList.get(position);
         holder.title.setText(photoModel.getTitle());
 
         //set the image using picasso or glide
-        //Toast.makeText(context, "profile " + user.getAvatar(), Toast.LENGTH_SHORT).show();
-
         Picasso.get().load(photoModel.getUrl()).into(holder.retroImgURL);
         Picasso.get().load(photoModel.getThumbnailUrl()).into(holder.retroThumbnail);
-
-
-       // Glide.with(context).load(photoModel.getThumbnailUrl()).placeholder(R.drawable.ic_launcher_foreground).into(holder.retroThumbnail);
-        //Glide.with(context).load(photoModel.getUrl()).placeholder(R.drawable.ic_launcher_foreground).into(holder.retroImgURL);
 
         //handling onclick on whole (photomodel) item while loading json
         holder.itemView.setOnClickListener(v -> {
@@ -73,9 +65,7 @@ public class RetroPhotoItemAdapter extends RecyclerView.Adapter<RetroPhotoItemAd
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         ImageView retroThumbnail, retroImgURL;
-
         TextView title;
 
         public ViewHolder(@NonNull View itemView) {
@@ -88,23 +78,22 @@ public class RetroPhotoItemAdapter extends RecyclerView.Adapter<RetroPhotoItemAd
     }
 
     private void requestSinglePhoto(int id) {
-        Toast.makeText(context, "requ one phot........" + id, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "requesting one photo........" + id, Toast.LENGTH_SHORT).show();
         retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
 
         //get one photo
-        Call<List<PhotoModel>> call = retrofitService.getOnePhoto(id);
+        //Call<List<PhotoModel>> call = retrofitService.getOnePhoto(id);
+        Call<ArrayList<PhotoModel>> call = retrofitService.getOnePhoto(id);
 
-        call.enqueue(new Callback<List<PhotoModel>>() {
+        call.enqueue(new Callback<ArrayList<PhotoModel>>() {
             @Override
-            public void onResponse(Call<List<PhotoModel>> call, Response<List<PhotoModel>> response) {
+            public void onResponse(Call<ArrayList<PhotoModel>> call, Response<ArrayList<PhotoModel>> response) {
                 Toast.makeText(context, response.body().get(0).getId(), Toast.LENGTH_SHORT).show();
             }
-
             @Override
-            public void onFailure(Call<List<PhotoModel>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<PhotoModel>> call, Throwable t) {
                 Toast.makeText(context, "no photo found for id : " + id , Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

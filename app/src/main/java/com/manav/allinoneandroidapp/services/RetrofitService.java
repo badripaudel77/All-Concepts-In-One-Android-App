@@ -1,7 +1,9 @@
 package com.manav.allinoneandroidapp.services;
 
+import com.manav.allinoneandroidapp.model.JSONPostModel;
 import com.manav.allinoneandroidapp.model.PhotoModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,11 +14,21 @@ public interface RetrofitService {
 
     //get photos
     @GET("photos")
-    Call<List<PhotoModel>> getAllPhotos();
+    Call<ArrayList<PhotoModel>> getAllPhotos();
 
     //get photo details or only one photo
     @GET("photos/{id}")
-    Call<List<PhotoModel>> getOnePhoto(@Path("id") int id);
+    Call<ArrayList<PhotoModel>> getOnePhoto(@Path("id") int id);
+
+
+    //get posts
+    @GET("posts")
+    Call<ArrayList<JSONPostModel>> getAllPosts();
+
+    //get photo details or only one post
+    @GET("posts/{id}")
+    Call<ArrayList<JSONPostModel>> getOnePost(@Path("id") int id);
+
 
     //.... TBC
 

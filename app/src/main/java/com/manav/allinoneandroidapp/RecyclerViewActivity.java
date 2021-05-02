@@ -60,8 +60,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Bottom Nav"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Dashboard"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Rest API - Retrofit"));
-
-
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "BroadCast and Services"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "CRUD Json Placeholder api"));
 
         //set adapter
         recyclerView.setAdapter(appItemsAdapter);

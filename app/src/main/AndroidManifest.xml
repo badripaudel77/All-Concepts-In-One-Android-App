@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".RetroOnePhotActivity"></activity>
+        <activity android:name=".JSONPlaceholderCRUDActivity"></activity>
+        <activity android:name=".BroadcastActivity"></activity>
+        <activity android:name=".RetroOnePhotActivity" />
         <activity
             android:name=".DashboardActivity"
             android:theme="@style/Theme.DashboardTheme" />
@@ -29,6 +31,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".BroadcastActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver> <!-- Mention the service name here -->
+        <service android:name=".services.MyBGMusicService" />
     </application>
 
 </manifest>

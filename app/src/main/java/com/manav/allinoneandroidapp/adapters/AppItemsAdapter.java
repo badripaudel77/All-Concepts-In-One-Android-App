@@ -13,7 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.manav.allinoneandroidapp.BottomNavActivity;
+import com.manav.allinoneandroidapp.BroadcastActivity;
 import com.manav.allinoneandroidapp.DashboardActivity;
+import com.manav.allinoneandroidapp.JSONPlaceholderCRUDActivity;
 import com.manav.allinoneandroidapp.LoadJSONActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.RestApiActivity;
@@ -81,6 +83,13 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
 
                 if(position == 4) {
                     v.getContext().startActivity(new Intent(v.getContext(), RestApiActivity.class));
+                }
+                if(position == 5) {
+                    v.getContext().startActivity(new Intent(v.getContext(), BroadcastActivity.class));
+                }
+
+                if(position == 6) {
+                    v.getContext().startActivity(new Intent(v.getContext(), JSONPlaceholderCRUDActivity.class));
                 }
             }
         });
