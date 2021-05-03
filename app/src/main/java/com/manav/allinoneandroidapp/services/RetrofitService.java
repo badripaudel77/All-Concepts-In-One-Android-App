@@ -4,10 +4,13 @@ import com.manav.allinoneandroidapp.model.JSONPostModel;
 import com.manav.allinoneandroidapp.model.PhotoModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface RetrofitService {
@@ -27,8 +30,16 @@ public interface RetrofitService {
 
     //get photo details or only one post
     @GET("posts/{id}")
-    Call<ArrayList<JSONPostModel>> getOnePost(@Path("id") int id);
+    Call<JSONPostModel> getOnePost(@Path("id") int id);
 
+    @POST("posts")
+    Call<JSONPostModel> createPost(@Body JSONPostModel post);
+
+    @DELETE("posts/{id}")
+    Call<Void> deletePost(@Path("id") int id);
+
+    @PUT("posts/{id}")
+    Call<JSONPostModel> updatePost(@Path("id") int id, @Body JSONPostModel postModel);
 
     //.... TBC
 

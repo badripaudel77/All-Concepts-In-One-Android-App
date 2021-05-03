@@ -12,8 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".JSONPlaceholderCRUDActivity"></activity>
-        <activity android:name=".BroadcastActivity"></activity>
+        <activity android:name=".PostDataActivity"></activity>
+        <activity android:name=".SinglePostDetailsActivity" />
+        <activity android:name=".JSONPlaceholderCRUDActivity" />
+        <activity android:name=".BroadcastActivity" />
         <activity android:name=".RetroOnePhotActivity" />
         <activity
             android:name=".DashboardActivity"

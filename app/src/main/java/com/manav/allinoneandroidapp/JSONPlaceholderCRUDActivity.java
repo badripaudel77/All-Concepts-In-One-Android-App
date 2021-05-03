@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class JSONPlaceholderCRUDActivity extends AppCompatActivity {
     private JSONPlaceholderAdapter jsonPlaceholderAdapter;
     private RecyclerView jsonPlaceholderRCV;
 
-    private Button getDataButton;
+    private Button getDataButton, postDataButton;
     private ProgressBar progressBar;
 
     @Override
@@ -35,9 +36,14 @@ public class JSONPlaceholderCRUDActivity extends AppCompatActivity {
         setContentView(R.layout.activity_j_s_o_n_placeholder_c_r_u_d);
 
         getDataButton = findViewById(R.id.getDataButton);
+        postDataButton = findViewById(R.id.postDataButton);
         progressBar = findViewById(R.id.indeterminateBar);
 
         retrofitService = RetrofitClientInstance.getRetrofitInstance().create(RetrofitService.class);
+
+        postDataButton.setOnClickListener(v -> {
+            startActivity(new Intent(JSONPlaceholderCRUDActivity.this, PostDataActivity.class));
+        });
 
         getDataButton.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE);
@@ -51,7 +57,6 @@ public class JSONPlaceholderCRUDActivity extends AppCompatActivity {
                 public void onResponse(Call<ArrayList<JSONPostModel>> call, Response<ArrayList<JSONPostModel>> response) {
                     if(response.isSuccessful()) {
                         progressBar.setVisibility(View.GONE);
-                        Toast.makeText(JSONPlaceholderCRUDActivity.this, "data ? " + response.body().get(0).getTitle(), Toast.LENGTH_SHORT).show();
                         ArrayList<JSONPostModel> postModels = response.body();
                         showData(postModels);
                     }
@@ -72,7 +77,6 @@ public class JSONPlaceholderCRUDActivity extends AppCompatActivity {
     }
 
     protected void showData(ArrayList<JSONPostModel> jsonPostModelArrayList) {
-        Toast.makeText(this, "  fine : " + jsonPostModelArrayList.get(0).getId(), Toast.LENGTH_SHORT).show();
         jsonPlaceholderRCV = findViewById(R.id.jsonPlaceholderRCV);
         jsonPlaceholderAdapter = new JSONPlaceholderAdapter(jsonPostModelArrayList, this);
         jsonPlaceholderRCV.setLayoutManager(new LinearLayoutManager(this));

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +19,7 @@ import com.manav.allinoneandroidapp.LoadJSONActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.RestApiActivity;
 import com.manav.allinoneandroidapp.TabActivity;
-import com.manav.allinoneandroidapp.models.DataItem;
+import com.manav.allinoneandroidapp.model.DataItem;
 
 import java.util.ArrayList;
 

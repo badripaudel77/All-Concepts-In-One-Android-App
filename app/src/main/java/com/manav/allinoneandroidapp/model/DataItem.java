@@ -1,4 +1,4 @@
-package com.manav.allinoneandroidapp.models;
+package com.manav.allinoneandroidapp.model;
 
 public class DataItem {
 

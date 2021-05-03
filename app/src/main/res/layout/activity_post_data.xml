@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostDataActivity">
+
+    <EditText
+        android:id="@+id/etPostTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+
+        android:layout_marginBottom="28dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter Post Title"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etPostBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPostBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Enter Post body"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etPostTitle"
+        app:layout_constraintStart_toStartOf="@+id/etPostTitle"
+        app:layout_constraintTop_toBottomOf="@+id/etPostTitle" />
+
+    <Button
+        android:id="@+id/submitPostBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Create Post"
+        app:layout_constraintEnd_toEndOf="@+id/etPostBody"
+        app:layout_constraintStart_toStartOf="@+id/etPostBody"
+        app:layout_constraintTop_toBottomOf="@+id/etPostBody" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

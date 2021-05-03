@@ -20,6 +20,11 @@ public class JSONPostModel {
         this.body = body;
     }
 
+    public JSONPostModel(String title, String body) {
+        this.title = title;
+        this.body = body;
+    }
+
     public Integer getUserId() {
         return userId;
     }

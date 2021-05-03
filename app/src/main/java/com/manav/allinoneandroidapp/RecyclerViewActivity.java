@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.manav.allinoneandroidapp.adapters.AppItemsAdapter;
-import com.manav.allinoneandroidapp.models.DataItem;
+import com.manav.allinoneandroidapp.model.DataItem;
 
 import java.util.ArrayList;
 
