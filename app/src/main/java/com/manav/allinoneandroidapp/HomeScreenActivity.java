@@ -20,7 +20,6 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     Button popupMenuBtn;
     Button contextMenu;
-    EditText etInput;
     TextView tvGoToRCView;
 
     @Override
@@ -32,7 +31,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
        popupMenuBtn = findViewById(R.id.popupMenuBtn);
        contextMenu = findViewById(R.id.showContextualMenuBtn);
-       etInput = findViewById(R.id.etInput);
+
 
         tvGoToRCView =findViewById(R.id.tvGoToRCView);
        //etInput.addTextChangedListener(......);
@@ -68,7 +67,6 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     private void showPopupMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(this, view);
-
         popupMenu.inflate(R.menu.popup_menu_item);
         popupMenu.show();
      }
@@ -83,7 +81,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-
         return super.onContextItemSelected(item);
     }
 }
+

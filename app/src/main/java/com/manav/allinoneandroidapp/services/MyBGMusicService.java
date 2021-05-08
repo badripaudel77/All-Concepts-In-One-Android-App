@@ -13,7 +13,6 @@ public class MyBGMusicService extends Service {
     private MediaPlayer mediaPlayer;
 
     @Override
-
     // execution of service will start
     // on calling this method
     public int onStartCommand(Intent intent, int flags, int startId) {

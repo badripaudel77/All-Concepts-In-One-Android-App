@@ -13,11 +13,8 @@ import android.widget.Toast;
 import com.manav.allinoneandroidapp.services.MyBGMusicService;
 
 public class BroadcastActivity extends AppCompatActivity {
-
     BroadcastReceiver airplaneModeBroadCastReceiver, charginModeBroadCastReceiver;
-
     Button startButton, stopButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,17 +37,15 @@ public class BroadcastActivity extends AppCompatActivity {
             }
         };
 
-        //start service button
+        //start service
         startButton.setOnClickListener(v ->{
             startService(new Intent(this, MyBGMusicService.class));
         });
-        //stop service button
+        //stop service
         stopButton.setOnClickListener( v -> {
-            // stopping the service
             stopService(new Intent( this, MyBGMusicService.class ) );
         });
     }
-
 
     @Override
     protected void onResume() {
@@ -59,7 +54,6 @@ public class BroadcastActivity extends AppCompatActivity {
                 airplaneModeBroadCastReceiver,
                 new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED)
         );
-
         BroadcastActivity.this.registerReceiver(
                 charginModeBroadCastReceiver,
                 new IntentFilter(Intent.ACTION_ANSWER)
@@ -68,7 +62,6 @@ public class BroadcastActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-
         super.onStart();
         Toast.makeText(this, "Broadcast activity has started(visible)", Toast.LENGTH_SHORT).show();
     }

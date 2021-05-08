@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllInOneAndroidApp">
-        <activity android:name=".PostDataActivity"></activity>
+        <activity android:name=".SQLiteDemoActivity"></activity>
+        <activity android:name=".GoogleMapActivity" />
+        <activity android:name=".PostDataActivity" />
         <activity android:name=".SinglePostDetailsActivity" />
         <activity android:name=".JSONPlaceholderCRUDActivity" />
         <activity android:name=".BroadcastActivity" />

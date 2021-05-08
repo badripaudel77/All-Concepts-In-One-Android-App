@@ -13,4 +13,23 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <!-- theme for google input... apply and see the changes -->
+    <style name="Theme.MyCustomTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- display color - text color ... -->
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">#7F7C83</item>
+        <item name="background">@color/black</item>
+    </style>
+
+<!--    <style name="Theme.MyPostDetailsTheme" parent="android:Theme.Material">-->
+<!--        <item name ="android:colorPrimary">#448AFF</item>-->
+<!--        <item name ="android:textColorPrimary">@color/black</item>-->
+<!--        <item name="colorButtonNormal">#8B000000</item>-->
+<!--        <item name ="android:colorPrimaryDark">#448AFF</item>-->
+<!--        <item name ="android:windowBackground">#9E000000</item>-->
+<!--        <item name="android:colorBackground">@color/black</item>-->
+<!--        <item name ="android:navigationBarColor">#000000</item>-->
+<!--    </style>-->
 </resources>

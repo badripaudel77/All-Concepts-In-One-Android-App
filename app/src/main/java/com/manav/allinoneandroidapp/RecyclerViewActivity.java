@@ -62,6 +62,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Rest API - Retrofit"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "BroadCast and Services"));
         dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "CRUD Json Placeholder api"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "Google Map"));
+        dataItemList.add(new DataItem(R.mipmap.ic_launcher_round, "SQLite Demo"));
 
         //set adapter
         recyclerView.setAdapter(appItemsAdapter);
