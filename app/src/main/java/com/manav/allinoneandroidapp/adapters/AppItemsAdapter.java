@@ -19,6 +19,7 @@ import com.manav.allinoneandroidapp.JSONPlaceholderCRUDActivity;
 import com.manav.allinoneandroidapp.LoadJSONActivity;
 import com.manav.allinoneandroidapp.R;
 import com.manav.allinoneandroidapp.RestApiActivity;
+import com.manav.allinoneandroidapp.RoomDBActivity;
 import com.manav.allinoneandroidapp.SQLiteDemoActivity;
 import com.manav.allinoneandroidapp.TabActivity;
 import com.manav.allinoneandroidapp.model.DataItem;
@@ -97,6 +98,9 @@ public class AppItemsAdapter extends RecyclerView.Adapter<AppItemsAdapter.ViewHo
                 }
                 if(position == 8) {
                     v.getContext().startActivity(new Intent(v.getContext(), SQLiteDemoActivity.class));
+                }
+                if(position == 9) {
+                    v.getContext().startActivity(new Intent(v.getContext(), RoomDBActivity.class));
                 }
             }
         });
